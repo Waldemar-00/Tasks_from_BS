@@ -16,11 +16,11 @@ if (b > a) {
   c = a + b + c
   // ДО: ReferenceError: Cannot access 'c' before initialization
   // ПОСЛЕ: Нет ошибки
-  console.log(c)
+  console.log(c, 'inside')
   // 17
 }
 
-console.log(c)
+console.log(c, 'outside')
 // Uncaught ReferenceError: c is not defined
 
 //! https://www.w3schools.com/js/js_hoisting.asp  !!!
