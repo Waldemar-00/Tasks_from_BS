@@ -31,12 +31,12 @@ function sumPositiveNegative(arr) {
     (returnedObj, num) => {
       return num > 0
         ? {
-            negative: returnedObj.negative,
+            ...returnedObj,
             positive: returnedObj.positive + num,
           }
         : {
+            ...returnedObj,
             negative: returnedObj.negative + num,
-            positive: returnedObj.positive,
           }
     },
     { positive: 0, negative: 0 },
